@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hixeol</title>
+    <link rel="shortcut icon" href="/img/favicon (2).png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <header class="bg-main">
+        <div class="green-box">
+
+        </div>
+        <div class="navigation">
+
+            <img src="img/Logo.svg" alt="" srcset="" class="logo">
+
+            <nav>
+
+                <a href="#" class="hide-desktop">
+                    <img src="/svg/humburger.svg" alt="" class="menu" id="menu"></a>
+
+                <ul class="show-desktop hide-mobile" id="nav">
+                    <li id="exit" class="exit-btn hide-desktop"><img src="/svg/close.svg" alt=""></li>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about-us.html">About Us</a></li>
+                    <li><a href="/products.html">Products</a></li>
+                    <li><a href="/distributors.html">Distributors</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+
+
+    </head>
+
+    <body>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+
+                <img src="/img/02-01.jpg" style="width:100%">
+
+            </div>
+
+            <div class="mySlides fade">
+
+                <img src="/img/02-02.jpg" style="width:100%">
+
+            </div>
+
+            <div class="mySlides fade">
+
+                <img src="/img/02-03.jpg" style="width:100%">
+
+            </div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+
+
+        <!-- <button id="prevbtn">Prev</button>
+    <button id="nextbtn">Next</button> -->
+
+        <main>
+
+            <div class="main-content">
+
+                <div class="context">
+                    <h1>It's Time</h1>
+                    <h4>For a change</h4>
+                </div>
+                <img src="/svg/Trade-Mark-01.svg" alt="" class="logo-tm">
+
+            </div>
+
+            <div class="body-content">
+                <div class="main-body">
+
+                    <h6>Product is designed to protect your engine and keep your vechicle running smoothly and responding perfectly</h6>
+
+                </div>
+            </div>
+
+            <div class="container-padding">
+
+                <div class="img-content">
+                    <img src="/img/Factory Panges.jpg" alt="" class="img-box">
+                    <div class="img-para">
+                        <p>Choosing the right lubricants for your vehicle is very important. We have a wide range of automotive lubricants for engine, gears, transmissions and other vital parts of heavy medium/light commercial vehicle, passenger cars and
+                            industrial applications. <br> <br> Our products meet all international standard like API, SAE, ILSAC, JASO, military specification etc. Our goal to achieve customer satisfaction through excellent quality and service. Believe
+                            in building long term customer relationship with quality and service.</p>
+                        <!-- <br> -->
+
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+
+
+
+        <div class="hero-img-footer">
+            <div class="footer-text">
+                <P>GET IN TOUCH OR REQUEST FOR A QUOTE <br> WE CAN HELP YOU TO ACHIEVE YOUR GOALS AND GROW YOUR BUSINESS</P>
+                <div class="btn">
+                    <a href="#">CONTACT US</a>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="green-box-1 copyright">
+            <p>Copyright &copy; 2019 - 20, Hiexol All Rights Reserved.</p>
+            <p>Hiexol Lubes</p>
+
+
+            <div class="social">
+                <ul>
+                    <li><i class="fa wp-icon fa-facebook-f fa-lg"></i></li>
+                    <li><i class="fa wp-icon fa-linkedin fa-lg"></i></li>
+                    <li><i class="fa wp-icon fa-twitter fa-lg"></i></li>
+                    <li><i class="fa wp-icon fa-instagram fa-lg"></i></li>
+
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- <script src="/app.js"></script> -->
+
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 4000); // Change image every 2 seconds
+            }
+        </script>
+
+
+        <script src="/app.js"></script>
+
+    </body>
+
+
+
+
+</html>
