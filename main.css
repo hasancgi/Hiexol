@@ -17,8 +17,8 @@
         justify-content: space-between;
         padding: 15px 40px;
         align-items: center;
-        background-color: #f9f9f9;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        background-color: #fafafa;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
     
     .logo {
@@ -518,12 +518,23 @@
     }
     /* about-us */
     
+    .fact-img {
+        width: 100%;
+    }
+    
     .about-us {
         padding: 20px 100px 0;
     }
     
+    @media only screen and (max-width: 650px) {
+        .about-us {
+            padding: 40px;
+        }
+    }
+    
     .about-us h1 {
         color: #37b34a;
+        border-bottom: 2px solid #fd5949;
     }
     
     .about-us .btn {
@@ -534,20 +545,83 @@
         font-size: .75em;
     }
     
+    @media only screen and (max-width: 650px) {
+        .logo-about-us {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .logo-about-us img {
+            width: 40px;
+        }
+    }
+    
     .logo-about-us {
+        margin: 0 auto;
+        width: 40%;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        margin: 60px 350px 0;
+        margin-bottom: 100px;
     }
     
     .logo-about-us img {
-        width: 100px;
+        width: 90px;
+        padding: .5em;
     }
     
-    .products {
+    .about-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 40px;
+        margin-top: 40px;
+        height: 300px;
+    }
+    
+    @media only screen and (max-width: 650px) {
+        .about-details {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-column-gap: 40px;
+            margin-top: 40px;
+            height: 300px;
+        }
+        .about-details .mission h3 {
+            text-transform: uppercase;
+            color: #fd5949;
+            border-bottom: 2px solid #fd5949;
+            line-height: 2;
+        }
+        .about-details .mission p {
+            text-align: justify;
+        }
+        .mission ul {
+            margin-bottom: 20px;
+        }
+    }
+    
+    .about-details .mission h3 {
+        text-transform: uppercase;
+        color: #fd5949;
+        border-bottom: 2px solid #fd5949;
+        margin-bottom: 10px;
+    }
+    
+    .about-details .mission p {
+        text-align: justify;
+    }
+    
+    .mission ul li {
+        list-style-position: inside
+        /* list-style-type: square; */
+    }
+    /* products */
+    /* .products {
         margin-top: 60px;
     }
+     */
     
     .title-prod h4 {
         padding-top: 40px;
@@ -563,34 +637,43 @@
         font-size: 1.5em;
     }
     
-    .prod-box {
-        margin: 0 auto;
-        width: 70%;
-        /* position: relative; */
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap: 5%;
-        align-items: center;
+    @media only screen and (max-width: 650px) {}
+    
+    .products {
+        padding: 4em;
     }
     
-    .prod-box-2 {
-        margin: 40px auto 100px;
-        width: 50%;
-        /* position: relative; */
+    .prod-box {
+        margin: auto;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 5%;
-        align-items: center;
-        justify-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        grid-gap: 60px;
+        /* grid-gap: 5%; */
     }
     
     .prod-1 {
+        margin: auto;
         padding: 10px;
         width: 170px;
-        height: 240px;
-        border: 1.5px solid #37b34a;
+        height: 220px;
         border-bottom: 6px solid #37b34a;
         text-align: center;
+        border-radius: 4px;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        cursor: pointer;
+        transition: .4s all;
+    }
+    
+    .prod-1:hover {
+        cursor: pointer;
+        box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.1), 0 15px 15px 5px rgba(0, 0, 0, 0.02);
+    }
+    
+    .prod-cent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     
     .img-1 {
@@ -631,6 +714,20 @@
     .content p span {
         font-weight: 500;
         font-size: 1em;
+    }
+    
+    .btn-products a {
+        font-size: 1.2em;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 15px 30px;
+        background-color: #37b34a;
+        border-radius: 5px;
+    }
+    
+    .btn-products {
+        display: block;
+        align-items: center;
     }
     /* contact-us */
     
