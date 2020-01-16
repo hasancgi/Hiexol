@@ -554,6 +554,7 @@
         }
         .logo-about-us img {
             width: 40px;
+            height: auto;
         }
     }
     
