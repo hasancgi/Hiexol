@@ -44,7 +44,8 @@
         text-align: left;
         background-color: #37b34a;
         z-index: 25;
-        padding-top: 3em;
+        padding-top: 5.3em;
+        padding-right: 1.2em;
         list-style: none;
     }
     
@@ -53,7 +54,7 @@
         text-decoration: none;
         display: block;
         width: 100%;
-        padding: 1em 1.5em;
+        padding: 1em 1em;
         /* background-color: rgb(49, 55, 59); */
         font-weight: 500;
     }
@@ -392,11 +393,11 @@
         .copyright {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-evenly;
             align-items: center;
             color: #ffffff;
             font-weight: 300;
-            height: 145px;
+            height: 170px;
             text-align: center;
         }
         .copyright P:nth-child(2) {
