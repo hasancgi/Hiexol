@@ -556,9 +556,10 @@
             margin: 0 auto;
             align-items: center;
             justify-content: center;
+            margin-bottom: 1em;
         }
         .logo-about-us img {
-            width: auto;
+            width: 20%;
             height: auto;
         }
     }
@@ -569,6 +570,7 @@
         margin: 0 auto;
         align-items: center;
         justify-content: center;
+        margin-bottom: 1em;
     }
     
     .logo-about-us img {
