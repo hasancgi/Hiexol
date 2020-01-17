@@ -553,26 +553,26 @@
         .logo-about-us {
             width: 100%;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: center;
         }
         .logo-about-us img {
-            width: 40px;
+            width: auto;
             height: auto;
         }
     }
     
     .logo-about-us {
-        margin: 0 auto;
-        width: 40%;
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        margin-bottom: 100px;
+        width: 100%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
     }
     
     .logo-about-us img {
-        width: 90px;
+        width: 10%;
         padding: .5em;
         height: auto;
     }
