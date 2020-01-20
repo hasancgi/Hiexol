@@ -1,0 +1,82 @@
+    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    /* about-us */
+    
+    .fact-img {
+        width: 100%;
+    }
+    
+    .about-us {
+        padding: 20px 100px 0;
+    }
+    
+    @media only screen and (max-width: 650px) {
+        .about-us {
+            padding: 40px;
+        }
+    }
+    
+    .about-us h1 {
+        color: #37b34a;
+        border-bottom: 2px solid #fd5949;
+    }
+    
+    .about-us .btn {
+        padding: 0;
+    }
+    
+    .about-us .btn a {
+        font-size: .75em;
+    }
+    
+    .about-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 40px;
+        margin-top: 40px;
+        height: 300px;
+    }
+    
+    @media only screen and (max-width: 650px) {
+        .about-details {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-column-gap: 40px;
+            margin-top: 40px;
+            height: 300px;
+        }
+        .about-details .mission h3 {
+            text-transform: uppercase;
+            color: #fd5949;
+            border-bottom: 2px solid #fd5949;
+            line-height: 2;
+        }
+        .about-details .mission p {
+            text-align: justify;
+        }
+        .mission ul {
+            margin-bottom: 20px;
+        }
+    }
+    
+    .about-details .mission h3 {
+        text-transform: uppercase;
+        color: #fd5949;
+        border-bottom: 2px solid #fd5949;
+        margin-bottom: 10px;
+    }
+    
+    .about-details .mission p {
+        text-align: justify;
+    }
+    
+    .mission ul li {
+        list-style-position: inside
+        /* list-style-type: square; */
+    }

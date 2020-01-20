@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* @media only screen and (max-width: 650px) {
+        .logo-about-us {
+            width: 100%;
+            display: flex;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1em;
+        }
+        .logo-about-us img {
+            width: 20%;
+            height: auto;
+        }
+    } */
+
+.logo-about-us {
+    width: 70%;
+    margin: 0 auto;
+    padding: 2em;
+    background-color: cornsilk;
+}
+
+.logo-prods {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-prods img {
+    width: 100px;
+    height: 100px;
+    padding: 1em;
+}
+
+
+/* .logo-about-us img {
+        width: 10%;
+        padding: .5em;
+        height: auto;
+    } */
