@@ -723,11 +723,11 @@
     }
     
     .green-icons {
-        margin: auto;
+        width: 85%;
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        padding-right: 15em;
+        position: relative;
     }
     
     .green-icons li {
