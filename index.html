@@ -7,7 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hiexol</title>
     <link rel="shortcut icon" href="/img/favicon (2).png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" href="main.css">
 </head>
@@ -15,27 +17,30 @@
 <body>
 
     <header class="bg-main">
-        <div class="green-box">
-
+        <div class="green-box green-icons">
+            <li><a href="#" target="_blank" /a><i class="fas fa-envelope"></i>sales@hiexol.com</li>
+            <li><a href="#" target="_blank" /a><i class="fas fa-phone"></i>+91 98425 14785</li>
         </div>
+
+
         <div class="navigation">
 
             <a href="/index.html"><img src="img/Logo.svg" alt="" srcset="" class="logo"></a>
 
-            <nav>
+                <nav>
 
-                <a href="#" class="hide-desktop">
-                    <img src="/svg/humburger.svg" alt="" class="menu" id="menu"></a>
+                    <a href="#" class="hide-desktop">
+                        <img src="/svg/humburger.svg" alt="" class="menu" id="menu"></a>
 
-                <ul class="show-desktop hide-mobile" id="nav">
-                    <li id="exit" class="exit-btn hide-desktop"><img src="/svg/close.svg" alt=""></li>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/about-us.html">About Us</a></li>
-                    <li><a href="/products.html">Products</a></li>
-                    <li><a href="/distributors.html">Distributors</a></li>
-                    <li><a href="/contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
+                    <ul class="show-desktop hide-mobile" id="nav">
+                        <li id="exit" class="exit-btn hide-desktop"><img src="/svg/close.svg" alt=""></li>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about-us.html">About Us</a></li>
+                        <li><a href="/products.html">Products</a></li>
+                        <li><a href="/distributors.html">Distributors</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
         </div>
 
     </header>
@@ -117,6 +122,69 @@
 
         </main>
 
+        <section class="products">
+
+            <div class="prod-box">
+                <div class="prod-1">
+                    <img class="img-1" src="/img/SAE 15W-40 - 4L.png" alt="">
+                    <div class="content">
+                        <p><span>SAE 15W-40</span></p>
+                        <p>Engine Oil</p>
+                        <!-- <p>4 Liter</p> -->
+                    </div>
+                </div>
+                <div class="prod-1">
+                    <img class="img-2" src="/img/SAE 10W-40 Full Synthetic - 1L.png" alt="">
+                    <div class="content">
+                        <p><span>SAE 15W-40</span></p>
+                        <p>Engine Oil</p>
+                        <!-- <p>4 Liter</p> -->
+                    </div>
+                </div>
+                <div class="prod-1">
+                    <img class="img-3" src="/img/SAE 15W-40 - 1L.png" alt="">
+                    <div class="content">
+                        <p><span>SAE 15W-40</span></p>
+                        <p>Engine Oil</p>
+                        <!-- <p>4 Liter</p> -->
+                    </div>
+                </div>
+                <div class="prod-1 ">
+                    <img class="img-4" src="/img/4T SAE 20W-40 - 900ML.png" alt="">
+                    <div class="content">
+                        <p><span>SAE 15W-40</span></p>
+                        <p>Engine Oil</p>
+                        <!-- <p>4 Liter</p> -->
+                    </div>
+                </div>
+                <div class="prod-1 ">
+                    <img class="img-5" src="/img/SAE 5W-40 - 4L.png" alt="">
+                    <div class="content">
+                        <p><span>SAE 15W-40</span></p>
+                        <p>Engine Oil</p>
+                        <!-- <p>4 Liter</p> -->
+                    </div>
+                </div>
+                <div class="prod-1 ">
+                    <img class="img-6" src="/img/SAE 15W-40 - 3L.png" alt="">
+                    <div class="content">
+                        <p><span>SAE 15W-40</span></p>
+                        <p>Engine Oil</p>
+                        <!-- <p>4 Liter</p> -->
+                    </div>
+                </div>
+                <div class="prod-1 prod-cent">
+                    <img class="img-6" src="/img/Lithium Grease.png" alt="">
+                    <div class="content">
+                        <p><span>SAE 15W-40</span></p>
+                        <p>Engine Oil</p>
+                        <!-- <p>4 Liter</p> -->
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
 
 
         <div class="hero-img-footer">
@@ -147,7 +215,6 @@
 
                 </ul>
             </div>
-        </div>
 
 
 
@@ -156,34 +223,34 @@
 
 
 
-        <!-- <script src="/app.js"></script> -->
+            <!-- <script src="/app.js"></script> -->
 
-        <script>
-            var slideIndex = 0;
-            showSlides();
+            <script>
+                var slideIndex = 0;
+                showSlides();
 
-            function showSlides() {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("dot");
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
+                function showSlides() {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) {
+                        slideIndex = 1
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                    setTimeout(showSlides, 4000); // Change image every 2 seconds
                 }
-                slideIndex++;
-                if (slideIndex > slides.length) {
-                    slideIndex = 1
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].className += " active";
-                setTimeout(showSlides, 4000); // Change image every 2 seconds
-            }
-        </script>
+            </script>
 
 
-        <script src="/app.js"></script>
+            <script src="/app.js"></script>
 
     </body>
 

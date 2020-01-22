@@ -353,6 +353,11 @@
         border-radius: 5px;
     }
     
+    .btn a:hover {
+        background-color: #37b34a;
+        opacity: .95;
+    }
+    
     @media only screen and (max-width: 650px) {
         .hero-img-footer {
             background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/img/FOOTER.png);
@@ -632,91 +637,6 @@
         display: block;
         align-items: center;
     }
-    /* contact-us */
-    
-    .map {
-        width: 100%;
-    }
-    /* our Branch Location */
-    
-    @media only screen and (max-width: 650px) {
-        /* .location {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-            background-color: #f4f4f4;
-            grid-gap: 20px;
-            padding: 2em;
-            height: auto;
-        } */
-    }
-    
-    .location {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        background-color: #f4f4f4;
-        grid-gap: 20px;
-        padding: 4em 1em;
-        height: auto;
-    }
-    
-    .add-1 {
-        margin: 0 auto;
-        padding: 1em;
-        width: 350px;
-        height: 180px;
-        background-color: #ffffff;
-        /* border: 1px solid #37b34a; */
-        border-bottom: 5px solid #37b34a;
-        border-radius: 5px;
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
-    }
-    
-    .add-1 a {
-        text-decoration: none;
-        color: black;
-    }
-    
-    .btns {
-        margin-top: 20px;
-    }
-    
-    .btns a {
-        text-decoration: none;
-        background-color: red;
-        padding: 5px 20px;
-        border-radius: 5px;
-        color: #ffffff;
-    }
-    /* Distributors */
-    
-    .location-dist {
-        /* height: 600px; */
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-        grid-gap: 2em;
-        padding: 2em;
-    }
-    
-    .dist-1 {
-        padding: 1em;
-        width: 370px;
-        height: 250px;
-        background-color: #ffffff;
-        /* border: 1px solid #37b34a; */
-        border-bottom: 5px solid #37b34a;
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
-        border-radius: 4px;
-    }
-    
-    .dist-1 a {
-        text-decoration: none;
-        color: black;
-    }
-    
-    .dist-1 h4 {
-        border-bottom: 4px solid #37b34a;
-    }
     /* slideshow */
     
     .mySlides {
@@ -801,25 +721,26 @@
             font-size: 11px
         }
     }
-    /* form */
     
-    .form-container {
-        width: 70%;
+    .green-icons {
         margin: auto;
-        padding: 2em;
-        /* border: 1px solid #fd5949; */
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 15em;
     }
     
-    form {
-        width: 500px;
-        border: 1px solid #fd5949;
-        padding: 1em;
+    .green-icons li {
+        list-style-type: none;
+        list-style: none;
+        padding: .5em;
     }
     
-    input {
-        width: 100%;
-        border: 1px solid rgba(0, 0, 0, 0.2);
-        outline: none;
-        height: 30px;
-        padding: 1em 0;
+    .green-icons li a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+    
+    .green-icons li i {
+        margin-right: 12px;
     }

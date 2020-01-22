@@ -8,16 +8,23 @@
     <title>Hixeol</title>
     <link rel="shortcut icon" href="/img/favicon (2).png" />
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="cont.css">
+
+
+
 
 </head>
 
 <body>
     <header class="bg-main">
-        <div class="green-box">
-
+        <div class="green-box green-icons">
+            <li><a href="#" target="_blank" /a><i class="fas fa-envelope"></i>sales@hiexol.com</li>
+            <li><a href="#" target="_blank" /a><i class="fas fa-phone"></i>+91 98425 14785</li>
         </div>
         <div class="navigation">
 
@@ -36,43 +43,143 @@
                     <li><a href="/distributors.html">Distributors</a></li>
                     <li><a href="/contact.html">Contact Us</a></li>
                 </ul>
-            </nav>
+                </nav>
         </div>
 
     </header>
 
-    <div class="map">
-        <iframe src="https://www.google.com/maps/d/embed?mid=1bVFEfLSa2vCUA6r88qIgF18rTGiEEsBG&hl=en" width="100%" height="500px"></iframe>
-    </div>
+    <div id="map"></div>
 
+    <script>
+        function initMap() {
+            // Map options
+            var options = {
+                zoom: 5.5,
+                center: {
+                    lat: 13.082680,
+                    lng: 80.270721
+                }
+            }
+
+            // New map
+            var map = new google.maps.Map(document.getElementById('map'), options);
+
+            // Listen for click on map
+            google.maps.event.addListener(map, 'click', function(event) {
+                // Add marker
+                addMarker({
+                    coords: event.latLng
+                });
+            });
+
+            /*
+            // Add marker
+            var marker = new google.maps.Marker({
+              position:{lat:42.4668,lng:-70.9495},
+              map:map,
+              icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+            });
+
+            var infoWindow = new google.maps.InfoWindow({
+              content:'<h1>Lynn MA</h1>'
+            });
+
+            marker.addListener('click', function(){
+              infoWindow.open(map, marker);
+            });
+            */
+
+            // Array of markers
+            var markers = [{
+                coords: {
+                    lat: 13.0827,
+                    lng: 80.2707
+                },
+                // iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                content: '<h1>Lynn MA</h1>'
+            }, {
+                coords: {
+                    lat: 17.3850,
+                    lng: 78.4867
+                },
+                content: '<h1>Amesbury MA</h1>'
+            }, {
+                coords: {
+                    lat: 10.7668,
+                    lng: 79.6348
+                }
+            }];
+
+            // Loop through markers
+            for (var i = 0; i < markers.length; i++) {
+                // Add marker
+                addMarker(markers[i]);
+            }
+
+            // Add Marker Function
+            function addMarker(props) {
+                var marker = new google.maps.Marker({
+                    position: props.coords,
+                    map: map,
+                    //icon:props.iconImage
+                });
+
+                // Check for customicon
+                if (props.iconImage) {
+                    // Set icon image
+                    marker.setIcon(props.iconImage);
+                }
+
+                // Check content
+                if (props.content) {
+                    var infoWindow = new google.maps.InfoWindow({
+                        content: props.content
+                    });
+
+                    marker.addListener('click', function() {
+                        infoWindow.open(map, marker);
+                    });
+                }
+            }
+        }
+    </script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0JC5O2uPWEeT8v53d-YUhg-2mkEpBEU4&callback=initMap">
+    </script>
 
 
     <div class="form-container">
 
-        <h5>Send Us a Message</h5> <br>
+        <p class="p-n">Thank you for your interest in Hiexol Lube <br> <span>Get started today</span></p>
+
+
 
         <form action="">
 
+            <p>Request a call from our Hiexol Team</p> <br>
+
+            <p>Please note that all fields marked with an asterisk (*) are required.</p> <br>
+
             <div class="line-1">
                 <div class="fname">
-                    <label>Enter your First Name</label> <br>
+                    <label>First Name*</label> <br>
                     <input type="text" name="FirstName" id="">
                 </div>
 
-                <div class="lname">
-                    <lable>Enter your Last Name</lable> <br>
+                <div class="lastname">
+                    <label>Last Name*</label> <br>
                     <input type="text" name="LastName" id="">
                 </div>
 
                 <div class="cname">
-                    <label>Enter your Company Name</label> <br>
+                    <label>Company Name*</label> <br>
                     <input type="text" name="CompanyName" id="">
                 </div>
             </div>
             <br>
             <div class="line-2">
                 <div class="ename">
-                    <label>E-mail</label> <br>
+                    <label>E-mail*</label> <br>
                     <input type="email" name="email" id="">
                 </div>
 
@@ -82,42 +189,60 @@
                 </div>
 
                 <div class="pname">
-                    <label>Phone</label> <br>
+                    <label>Phone*</label> <br>
                     <input type="number" name="phone" id="">
                 </div>
             </div>
 
             <div class="line-3">
                 <div class="oname">
-                    <label>Product Intrested In</label><br>
+                    <p>Product Intrested In</p>
 
-                    <input type="radio" name="option1" value="Oils"> Oils
+                    <!-- <select>
+                        <option value="Oils">Oils</option>
+                        <option value="Fuel Aditives">Fuel Aditives</option>
+                        <option value="Greases">Greases</option>
+                        <option value="Gear Lubricants">Gear Lubricants</option>
+                        <option value="Open Gear & Thread Lubes">Open Gear & Thread Lubes</option>
+                        <option value="Hydraulic Fluids">Hydraulic Fluids</option>
+                    </select> -->
 
-                    <input type="radio" name="option2" value="Fuel Aditives"> Fuel Aditives<br>
 
-                    <input type="radio" name="option3" value="Greases"> Greases
+                    <input type="radio" name="option1"> Oils <br>
 
-                    <input type="radio" name="option4" value="Gear Lubricants"> Gear Lubricants<br>
+                    <input type="radio" name="option1"> Fuel Aditives<br>
 
-                    <input type="radio" name="option5" value="Open Gear & Thread Lubes"> Open Gear & Thread Lubes
+                    <input type="radio" name="option1" value="Greases"> Greases <br>
 
-                    <input type="radio" name="option6" value="Hydraulic Fluids"> Hydraulic Fluids<br>
+                    <input type="radio" name="option1" value="Gear Lubricants"> Gear Lubricants<br>
+
+                    <input type="radio" name="option1" value="Open Gear & Thread Lubes"> Open Gear & Thread Lubes <br>
+
+                    <input type="radio" name="option1" value="Hydraulic Fluids"> Hydraulic Fluids<br>
+
+
+
                 </div>
             </div>
+
+
 
             <div class="hname">
                 <p>How can we help you?</p>
-                <input type="text" name="help" id="">
+                <textarea name="comment" id=""></textarea>
             </div>
 
             <div class="ckname">
-                <input type="checkbox" name="checkbox" id="" value="">I would like to receive news from Schaffer Oil
-
-                <div class="btns">
-                    <a href="#">Send</a>
-                </div>
+                <!-- <input type="checkbox" name="checkbox" id="" value="">I would like to receive news from Schaffer Oil -->
+                <label>
+                    <input type="checkbox" class="filled-in" />
+                    <span>I would like to receive news from Schaffer Oil</span>
+                  </label>
 
             </div>
+
+            <br>
+            <button class="button" type="button" ">Submit</button>
 
         </form>
 
@@ -125,41 +250,41 @@
 
     </div>
 
-    <div class="title-prod">
+    <div class="title-prod ">
 
         <h4><strong>Our Branch Location</strong></h4>
 
     </div>
 
-    <div class="location">
+    <div class="location ">
 
-        <div class="add-1">
+        <div class="add-1 ">
 
             <h4>Hiexol Lubes</h4>
             <p>20,A-Bazaar, Main Road, Podakkudi, 614103, Thiruvarur Dist.</p>
             <p>RIAZ: +918438344423</p>
-            <a href="sales@hiexol.com">sales@hiexol.com</a> <br>
-            <a href="sales@hiexol.com">www.hiexol.com</a>
+            <a href="sales@hiexol.com ">sales@hiexol.com</a> <br>
+            <a href="sales@hiexol.com ">www.hiexol.com</a>
 
         </div>
 
-        <div class="add-1">
+        <div class="add-1 ">
 
             <h4>Hiexol Lubes</h4>
             <p>No-273, Adayalampatu Road, Nolambur, Mogappair West, Chennai - 600095.</p>
             <p>MOIDEEN: +91 735849799</p>
-            <a href="sales@hiexol.com">sales@hiexol.com</a> <br>
-            <a href="sales@hiexol.com">www.hiexol.com</a>
+            <a href="sales@hiexol.com ">sales@hiexol.com</a> <br>
+            <a href="sales@hiexol.com ">www.hiexol.com</a>
 
         </div>
 
-        <div class="add-1">
+        <div class="add-1 ">
 
             <h4>Hiexol Lubes</h4>
             <p>H.No. 1-6-95/14/B, Jublipura, Saradhi Nagar, Khammam 3-507003, Telangana, India</p>
             <p>MOHAMMED AHMED (MUNNA): <br> +91 939035733</p>
-            <a href="sales@hiexol.com">sales@hiexol.com</a> <br>
-            <a href="sales@hiexol.com">www.hiexol.com</a>
+            <a href="sales@hiexol.com ">sales@hiexol.com</a> <br>
+            <a href="sales@hiexol.com ">www.hiexol.com</a>
 
         </div>
 
@@ -167,23 +292,24 @@
 
     </section>
 
-    <div class="green-box-1 copyright">
+    <div class="green-box-1 copyright ">
         <p>Copyright &copy; 2019 - 20, Hiexol All Rights Reserved. <br> Hiexol Lubes</p>
         <!-- <p>Hiexol Lubes</p> -->
 
 
-        <div class="social">
+        <div class="social ">
             <ul>
-                <li><a href="https://www.facebook.com/hiexollubes" target="_blank"><i class="fa wp-icon fa-facebook-f fa-lg"></i></a></li>
-                <li><a href="https://www.linkedin.com/hiexollubes" target="_blank"><i class="fa wp-icon fa-linkedin fa-lg"></i></a></li>
-                <li><a href="https://twitter.com/hiexollubes" target="_blank"><i class="fa wp-icon fa-twitter fa-lg"></i></a></li>
-                <li><a href="https://www.instagram.com/hiexollubes" target="_blank"><i class="fa wp-icon fa-instagram fa-lg"></i></a></li>
+                <li><a href="https://www.facebook.com/hiexollubes " target="_blank "><i class="fa wp-icon fa-facebook-f fa-lg "></i></a></li>
+                <li><a href="https://www.linkedin.com/hiexollubes " target="_blank "><i class="fa wp-icon fa-linkedin fa-lg "></i></a></li>
+                <li><a href="https://twitter.com/hiexollubes " target="_blank "><i class="fa wp-icon fa-twitter fa-lg "></i></a></li>
+                <li><a href="https://www.instagram.com/hiexollubes " target="_blank "><i class="fa wp-icon fa-instagram fa-lg "></i></a></li>
 
             </ul>
         </div>
     </div>
 
-    <script src="/app.js"></script>
+    <script src="/app.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js "></script>
 </body>
 
 
