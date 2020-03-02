@@ -6,12 +6,6 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     
-    .green-box {
-        width: 100%;
-        height: 40px;
-        background-color: rgb(55, 179, 74);
-    }
-    
     .navigation {
         display: flex;
         justify-content: space-between;
@@ -574,7 +568,7 @@
     
     .prod-1 {
         margin: auto;
-        padding: 10px;
+        padding: 5px 10px;
         width: 170px;
         height: 220px;
         border-bottom: 6px solid #37b34a;
@@ -734,26 +728,91 @@
             font-size: 11px
         }
     }
+    /* .green-box {
+        width: 100%;
+        height: 40px;
+        background-color: rgb(55, 179, 74);
+    }
     
     .green-icons {
         width: 85%;
+        margin: auto;
         display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        position: relative;
+        justify-content: center;
+        height: 40px;
     }
     
     .green-icons li {
+        text-align: center;
         list-style-type: none;
         list-style: none;
-        padding: .5em;
+        
     }
     
     .green-icons li a {
         text-decoration: none;
         color: #ffffff;
+    } */
+    
+    .green-box {
+        width: 100%;
+        background-color: rgb(55, 179, 74);
     }
     
-    .green-icons li i {
-        margin-right: 12px;
+    .green-box ul {
+        width: 85%;
+        height: 40px;
+        margin: 0 35px 0 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    @media only screen and (max-width: 475px) {
+        .green-box {
+            width: 100%;
+            background-color: rgb(55, 179, 74);
+        }
+        .green-box ul {
+            width: 95%;
+            height: 40px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    
+    @media only screen and (max-width: 320px) {
+        .green-box {
+            width: 100%;
+            background-color: rgb(55, 179, 74);
+        }
+        .green-box ul {
+            /* width: 100%; */
+            height: 40px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .green-box ul li {
+            font-size: .75em;
+        }
+    }
+    
+    .green-box ul li {
+        list-style: none;
+        padding: 0 .5em;
+        font-weight: 400;
+    }
+    
+    .green-box ul li i {
+        color: #fff;
+        padding: 0.35em;
+    }
+    
+    .green-box ul li a {
+        text-decoration: none;
+        color: #ffffff;
     }
